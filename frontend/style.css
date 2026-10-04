@@ -1,0 +1,45 @@
+body {
+    background-color: #f5f7fb;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+}
+
+.opportunity-card {
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.opportunity-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.status-badge {
+    font-size: 0.8rem;
+}
+
+.closed-card {
+    opacity: 0.85;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #555;
+}
+
+#message {
+    min-height: 50px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 12px;
+    color: #777;
+}
