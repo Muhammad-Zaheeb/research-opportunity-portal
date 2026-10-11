@@ -1,0 +1,102 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/opportunities"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "title": "string",
+        "description": "string",
+        "research_area": "string",
+        "faculty_name": "string",
+        "department": "string",
+        "required_skills": "string",
+        "available_positions": 559,
+        "application_deadline": "1998-03-04",
+        "status": "Open"
+      }
+response:
+  statusCode: 422
+  statusText: Unprocessable Entity (WebDAV) (RFC 4918)
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "detail": [
+          {
+            "loc": [
+              4008,
+              "string"
+            ],
+            "msg": "string",
+            "type": "string",
+            "input": "",
+            "ctx": {}
+          },
+          {
+            "loc": [
+              7389,
+              394
+            ],
+            "msg": "string",
+            "type": "string",
+            "input": "",
+            "ctx": {}
+          }
+        ]
+      }
+    $type: |-
+      {
+        "title": "HTTPValidationError",
+        "type": "object",
+        "properties": {
+          "detail": {
+            "type": "array",
+            "title": "Detail",
+            "items": {
+              "title": "ValidationError",
+              "type": "object",
+              "properties": {
+                "loc": {
+                  "type": "array",
+                  "title": "Location",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "type": "integer"
+                      }
+                    ]
+                  }
+                },
+                "msg": {
+                  "type": "string",
+                  "title": "Message"
+                },
+                "type": {
+                  "type": "string",
+                  "title": "Error Type"
+                },
+                "ctx": {
+                  "type": "object",
+                  "title": "Context"
+                }
+              },
+              "required": [
+                "loc",
+                "msg",
+                "type"
+              ]
+            }
+          }
+        }
+      }
+order: 2000

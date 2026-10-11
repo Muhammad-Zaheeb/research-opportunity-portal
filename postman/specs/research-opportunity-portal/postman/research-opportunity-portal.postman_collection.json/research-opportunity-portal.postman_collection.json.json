@@ -1,0 +1,454 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "research-opportunity-portal/postman/research-opportunity-portal.postman_collection.json",
+    "version": "1.0.0",
+    "description": ""
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "paths": {
+    "/api/opportunities/{opportunity_id}": {
+      "get": {
+        "summary": "Get One",
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "detail": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "loc": {
+                            "type": "array",
+                            "items": {
+                              "type": "integer"
+                            }
+                          },
+                          "msg": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string"
+                          },
+                          "input": {
+                            "type": "string"
+                          },
+                          "ctx": {
+                            "type": "object"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "detail": [
+                    {
+                      "loc": [
+                        7804,
+                        "string"
+                      ],
+                      "msg": "string",
+                      "type": "string",
+                      "input": "",
+                      "ctx": {}
+                    },
+                    {
+                      "loc": [
+                        3617,
+                        "string"
+                      ],
+                      "msg": "string",
+                      "type": "string",
+                      "input": "",
+                      "ctx": {}
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "api",
+          "opportunities",
+          "{opportunity_id}"
+        ]
+      },
+      "parameters": [
+        {
+          "name": "opportunity_id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer"
+          },
+          "example": 4083
+        }
+      ],
+      "put": {
+        "summary": "Update",
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "detail": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "loc": {
+                            "type": "array",
+                            "items": {
+                              "type": "integer"
+                            }
+                          },
+                          "msg": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string"
+                          },
+                          "input": {
+                            "type": "string"
+                          },
+                          "ctx": {
+                            "type": "object"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "detail": [
+                    {
+                      "loc": [
+                        7804,
+                        "string"
+                      ],
+                      "msg": "string",
+                      "type": "string",
+                      "input": "",
+                      "ctx": {}
+                    },
+                    {
+                      "loc": [
+                        3617,
+                        "string"
+                      ],
+                      "msg": "string",
+                      "type": "string",
+                      "input": "",
+                      "ctx": {}
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "api",
+          "opportunities",
+          "{opportunity_id}"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "nullable": true
+                  },
+                  "description": {
+                    "nullable": true
+                  },
+                  "research_area": {
+                    "type": "string"
+                  },
+                  "faculty_name": {
+                    "nullable": true
+                  },
+                  "department": {
+                    "nullable": true
+                  },
+                  "required_skills": {
+                    "nullable": true
+                  },
+                  "available_positions": {
+                    "nullable": true
+                  },
+                  "application_deadline": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "status": {
+                    "nullable": true
+                  }
+                }
+              },
+              "example": {
+                "title": null,
+                "description": null,
+                "research_area": "string",
+                "faculty_name": null,
+                "department": null,
+                "required_skills": null,
+                "available_positions": null,
+                "application_deadline": "1961-10-16",
+                "status": null
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete",
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "detail": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "loc": {
+                            "type": "array",
+                            "items": {
+                              "type": "integer"
+                            }
+                          },
+                          "msg": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string"
+                          },
+                          "input": {
+                            "type": "string"
+                          },
+                          "ctx": {
+                            "type": "object"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "detail": [
+                    {
+                      "loc": [
+                        7804,
+                        "string"
+                      ],
+                      "msg": "string",
+                      "type": "string",
+                      "input": "",
+                      "ctx": {}
+                    },
+                    {
+                      "loc": [
+                        3617,
+                        "string"
+                      ],
+                      "msg": "string",
+                      "type": "string",
+                      "input": "",
+                      "ctx": {}
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "api",
+          "opportunities",
+          "{opportunity_id}"
+        ]
+      }
+    },
+    "/api/opportunities": {
+      "get": {
+        "summary": "Get All",
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        },
+        "tags": [
+          "api",
+          "opportunities"
+        ]
+      },
+      "post": {
+        "summary": "Create",
+        "responses": {
+          "201": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "detail": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "loc": {
+                            "type": "array",
+                            "items": {
+                              "type": "integer"
+                            }
+                          },
+                          "msg": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string"
+                          },
+                          "input": {
+                            "type": "string"
+                          },
+                          "ctx": {
+                            "type": "object"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "example": {
+                  "detail": [
+                    {
+                      "loc": [
+                        7804,
+                        "string"
+                      ],
+                      "msg": "string",
+                      "type": "string",
+                      "input": "",
+                      "ctx": {}
+                    },
+                    {
+                      "loc": [
+                        3617,
+                        "string"
+                      ],
+                      "msg": "string",
+                      "type": "string",
+                      "input": "",
+                      "ctx": {}
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "api",
+          "opportunities"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "research_area": {
+                    "type": "string"
+                  },
+                  "faculty_name": {
+                    "type": "string"
+                  },
+                  "department": {
+                    "type": "string"
+                  },
+                  "required_skills": {
+                    "type": "string"
+                  },
+                  "available_positions": {
+                    "type": "integer"
+                  },
+                  "application_deadline": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "status": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "title": "string",
+                "description": "string",
+                "research_area": "string",
+                "faculty_name": "string",
+                "department": "string",
+                "required_skills": "string",
+                "available_positions": 7342,
+                "application_deadline": "2016-10-07",
+                "status": "Open"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "summary": "Home",
+        "responses": {
+          "200": {
+            "description": "Successful Response"
+          }
+        },
+        "tags": [
+          "/"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+$kind: http-request
+url: "{{baseUrl}}/api/opportunities/:opportunity_id"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  opportunity_id: "4083"
+body:
+  type: json
+  content: |-
+    {
+      "title": null,
+      "description": null,
+      "research_area": "string",
+      "faculty_name": null,
+      "department": null,
+      "required_skills": null,
+      "available_positions": null,
+      "application_deadline": "1961-10-16",
+      "status": null
+    }
+settings: {}
+examples: ./.resources/Update.resources/examples
+order: 2000

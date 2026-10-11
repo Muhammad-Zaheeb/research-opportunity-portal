@@ -1,0 +1,100 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Research Opportunity Portal API",
+    "version": "1.0.0",
+    "description": ""
+  },
+  "servers": [
+    {
+      "url": "http://127.0.0.1:8000"
+    }
+  ],
+  "paths": {
+    "/api/opportunities": {
+      "get": {
+        "summary": "Research Opportunity Portal API",
+        "responses": {}
+      },
+      "post": {
+        "summary": "Create Opportunity",
+        "responses": {},
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "research_area": {
+                    "type": "string"
+                  },
+                  "faculty_name": {
+                    "type": "string"
+                  },
+                  "department": {
+                    "type": "string"
+                  },
+                  "required_skills": {
+                    "type": "string"
+                  },
+                  "available_positions": {
+                    "type": "integer"
+                  },
+                  "application_deadline": {
+                    "type": "string",
+                    "format": "date"
+                  },
+                  "status": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "title": "Data Analytics for Student Performance",
+                "description": "Research on analyzing student performance data to improve academic outcomes.",
+                "research_area": "Data Science",
+                "faculty_name": "Dr. Sara Ahmed",
+                "department": "Computer Science",
+                "required_skills": "Python, SQL, Statistics",
+                "available_positions": 2,
+                "application_deadline": "2027-04-15",
+                "status": "Open"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Create Opportunity 3",
+        "responses": {},
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "available_positions": {
+                    "type": "integer"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "available_positions": 5,
+                "description": "Updated research on AI-based personalized learning for university students."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

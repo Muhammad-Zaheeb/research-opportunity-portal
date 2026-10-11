@@ -1,0 +1,30 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/opportunities"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "title": "string",
+        "description": "string",
+        "research_area": "string",
+        "faculty_name": "string",
+        "department": "string",
+        "required_skills": "string",
+        "available_positions": 559,
+        "application_deadline": "1998-03-04",
+        "status": "Open"
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: application/json
+  body:
+    type: text
+    content: ""
+order: 1000

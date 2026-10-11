@@ -1,0 +1,32 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/opportunities/:opportunity_id"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: application/json
+  pathVariables:
+    opportunity_id: "7273"
+  body:
+    type: json
+    content: |-
+      {
+        "title": "string",
+        "description": null,
+        "research_area": "string",
+        "faculty_name": null,
+        "department": null,
+        "required_skills": "string",
+        "available_positions": null,
+        "application_deadline": "1975-07-14",
+        "status": null
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: text
+    content: ""
+order: 1000

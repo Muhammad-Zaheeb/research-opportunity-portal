@@ -1,0 +1,84 @@
+$kind: http-request
+description: ""
+url: "{{baseUrl}}/api/opportunities"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: application/json
+body:
+  type: json
+  content: |-
+    {
+      "title": "string",
+      "description": "string",
+      "research_area": "string",
+      "faculty_name": "string",
+      "department": "string",
+      "required_skills": "string",
+      "available_positions": 559,
+      "application_deadline": "1998-03-04",
+      "status": "Open"
+    }
+  $type: |-
+    {
+      "title": "OpportunityCreate",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Title"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Description"
+        },
+        "research_area": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Research Area"
+        },
+        "faculty_name": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Faculty Name"
+        },
+        "department": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Department"
+        },
+        "required_skills": {
+          "type": "string",
+          "minLength": 1,
+          "title": "Required Skills"
+        },
+        "available_positions": {
+          "type": "integer",
+          "title": "Available Positions"
+        },
+        "application_deadline": {
+          "type": "string",
+          "title": "Application Deadline",
+          "format": "date"
+        },
+        "status": {
+          "type": "string",
+          "title": "Status"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "research_area",
+        "faculty_name",
+        "department",
+        "required_skills",
+        "available_positions",
+        "application_deadline"
+      ]
+    }
+settings: {}
+examples: ./.resources/Create.resources/examples
+order: 2000

@@ -1,0 +1,30 @@
+$kind: http-request
+description: ""
+url: "{{baseUrl}}/api/opportunities/:opportunity_id"
+method: DELETE
+headers:
+  Accept: application/json
+pathVariables:
+  - key: opportunity_id
+    value: "7273"
+    disabled: false
+    description: ""
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "Opportunity Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+body:
+  type: text
+  content: ""
+settings: {}
+examples: ./.resources/Delete.resources/examples
+order: 3000

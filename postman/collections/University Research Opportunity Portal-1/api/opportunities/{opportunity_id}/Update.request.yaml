@@ -1,0 +1,149 @@
+$kind: http-request
+description: ""
+url: "{{baseUrl}}/api/opportunities/:opportunity_id"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: application/json
+pathVariables:
+  - key: opportunity_id
+    value: "7273"
+    disabled: false
+    description: ""
+    $type: |-
+      {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "Opportunity Id",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+body:
+  type: json
+  content: |-
+    {
+      "title": "string",
+      "description": null,
+      "research_area": "string",
+      "faculty_name": null,
+      "department": null,
+      "required_skills": "string",
+      "available_positions": null,
+      "application_deadline": "1975-07-14",
+      "status": null
+    }
+  $type: |-
+    {
+      "title": "OpportunityUpdate",
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Title",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "research_area": {
+          "title": "Research Area",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "faculty_name": {
+          "title": "Faculty Name",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "department": {
+          "title": "Department",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "required_skills": {
+          "title": "Required Skills",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "available_positions": {
+          "title": "Available Positions",
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "application_deadline": {
+          "title": "Application Deadline",
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "title": "Status",
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    }
+settings: {}
+examples: ./.resources/Update.resources/examples
+order: 2000
