@@ -1,0 +1,15 @@
+workspace:
+  id: 061343ab-602b-4f73-8b92-b855dcfa59c1
+localResources:
+  specs:
+    - ../postman/specs/Research Opportunity Portal API/Research Opportunity Portal API.json
+    - ../postman/specs/University Research Opportunity Portal/index.json
+    - ../postman/specs/research-opportunity-portal/postman/research-opportunity-portal.postman_collection.json/research-opportunity-portal.postman_collection.json.json
+resourceNameMappings:
+  specs:
+    - ../postman/specs/Research Opportunity Portal API/Research Opportunity Portal API.json: Research Opportunity Portal API
+    - ../postman/specs/University Research Opportunity Portal/index.json: University Research Opportunity Portal
+    - ../postman/specs/research-opportunity-portal/postman/research-opportunity-portal.postman_collection.json/research-opportunity-portal.postman_collection.json.json: research-opportunity-portal/postman/research-opportunity-portal.postman_collection.json
+cloudResources:
+  collections:
+    ../postman/collections/University Research Opportunity Portal: 9389d889-b3d7-468e-974a-5d8d5e19b57a

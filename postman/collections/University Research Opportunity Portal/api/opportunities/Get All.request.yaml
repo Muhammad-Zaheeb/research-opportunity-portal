@@ -1,8 +1,0 @@
-$kind: http-request
-url: "{{baseUrl}}/api/opportunities"
-method: GET
-headers:
-  Accept: application/json
-settings: {}
-examples: ./.resources/Get All.resources/examples
-order: 2000
